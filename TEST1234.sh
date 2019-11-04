@@ -4,3 +4,4 @@
 echo \"\$\{TEST1234\'\}\"
 echo
 echo "1234"
+echo
