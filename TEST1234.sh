@@ -17,3 +17,4 @@ echo
 # windows 14-11 
 # windows 14-18
 # windows 14-20
+# выгулял собаку 15-01
