@@ -7,3 +7,4 @@ echo "1234"
 echo
 echo \"\$\{TEST1234\'\}\"
 echo
+#test
