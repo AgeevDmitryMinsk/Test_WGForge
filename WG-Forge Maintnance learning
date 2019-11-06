@@ -1,0 +1,76 @@
+#учеба в WG-Forge Maintnance
+
+Рабочий стол: /User/mbp13_2015/Desktop
+Место хранения ключей : /Users/mbp13_2015/.ssh/id_rsa
+cd ~ puttygen /User/mbp13_2015/Desktop/ageev_dmitry_wargaming_public_key.ppk  -O public-openssh -o id_rsa.pub 
+ssh-rsa – то что сгенерировал Mac AAAAB3NzaC1yc2EAAAADAQABAAABAQDkox5idtc1W4xNrJa2y2RJnbe5OTvad1HcZ2OgRtqFklQQ2ig5hvwZtRcam188U50BSHKgR/WDPdu6Uef9FdZ6ryKDtzthYpROwziL2LtXVUL4L7Y5gRcm0bfsEoBplXY6iBGTIANFcuVJOKFopkpR4oz1VnqsNfa86OLkOeZs5wN8OJ7sQhiVCGVhJV8lKdX9ZVX0zKwO0Pwv9+Bd9QLcY3kd3lDczfMJmg+8tLpkxPJYR3qtFdP3e0K3n22WM2u6PTUIFnwNFDb4o/tGZGbMeKSD2jJtPRLp1KwACBWWHzKCkNGYpjbTvBds245ZKtGbLH2JAnbzLlrzGzG+VyrV ageev.dmitry@outlook.com
+
+Вход на сервер: ssh centos@5.188.134.195
+sudo su – команда для работы в терминале под пользователем root
+sudo !! - запустить предыдущую команду с правами root
+192.168.203.14/Zabbix
+http://ithelp21.ru/ustanovka-zabbix-na-centos/
+http://5.188.134.195/zabbix/setup.php
+ithelp21 - пароль на пользователя Zabbix
+3reBRakA – пароль для входа в CENTOS по SSH
+вход в Zabbix: Admin – zabbix
+cd .. - перейти на уровень выше (выйти из каталога)
+cd текущий каталог – войти в текущий каталог
+ls – просмотреть содержимое текущего каталога
+ls  -a – вывод скрытых файлов
+ls -l – показывает все файлы на предмет исполняемые (х) или нет 
+$ mv  - опции файл-источник файл-приемник – команда для переименования файла
+touch – создание файла 
+mkdit – создание папки/директории
+mcedit – редактирование файла
+vim echo-script.sh  – редактирование файла (2)
+i – после ее нажатия можно редактировать файл в vim
+:w имя файла – сохранение файла в vim
+:q enter – выход из vim
+:q! enter – выход из vim без сохранения
+:wq - выход из vim c сохранением
+rm файл– удаляет файл
+rm – r папка – удаляет папку
+pwd # просмотреть путь к текущему файлу
+whoami # имя пользователя
+chmod +x script1.sh – команда  в терминале сделать скрипт script1.sh исполняемым
+echo "имя пользователя $USER"  -  # имя пользователя mbp13_2015
+clear – очистка терминала (и cnrl+L)
+grep – “выдрезает” нужные вам строки из текстовых файлов, которые содержат указанный пользователем текст
+df -h - информация о системных ресурсах
+netstat -nlpt – отображает информацию, сетевые подключения, статистику интерфейсов
+0.0.0.0:5000 – означает что порт 5000 смотрит в интернет (0000)
+127.0.0.1:25 - означает что порт 25 смотрит на локальную сеть (127.0.0.1)
+Для открытия порта 10050:
+iptables -A INPUT -i eth0 -p tcp --dport 10050 -j ACCEPT
+iptables -A INPUT -i eth0 -p udp --dport 10050 -j ACCEPT
+lsblk – показывает диски
+blkid – для просмотра UUID
+fdisk -l
+df -h
+
+
+
+Скрипты на BASH(Virtual Studio Code): 
+cd /users/mbp13_2015/Projects/Bash_scripts
+После создания скрипта в BASH его нужно сделать исполняемым: 
+chmod +x script1.sh – команда  в терминале сделать скрипт script1.sh исполняемым
+./ script1.sh  - запуск скрипта в терминале
+Echo “…” – вывод инфы на экран терминала
+if [ …. ] then …elif … else … fi
+if [пробел  выражение/сравнение пробел]
+больше: -gt
+больше или равно: -ge
+равно: -eq
+меньше: -lt
+меньше или равно: -le
+не равно : -ne
+цикл for в bash:
+for … in … do … done
+for ((i=1; i<=10; i++)) do … done
+IFS=$”\n” – новая строка при чтение в цикле for 
+
+Python3 скрипты: /usr/local/bin/charm
+Python3 проекты: /Users/mbp13_2015/PycharmProjects/Lesson1
+
+sudo scutil --set HostName myMacPro – переименовать пользователя в терминале)
