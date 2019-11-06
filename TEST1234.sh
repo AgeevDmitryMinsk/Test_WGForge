@@ -15,3 +15,5 @@ echo
 # windows 13-40
 # windows 13-52
 # windows 14-11 
+# windows 14-18
+# windows 14-20
