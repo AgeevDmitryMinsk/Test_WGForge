@@ -8,3 +8,4 @@ echo
 echo \"\$\{TEST1234\'\}\"
 echo
 #test
+echo
