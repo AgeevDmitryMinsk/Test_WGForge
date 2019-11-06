@@ -11,4 +11,7 @@ echo
 echo
 # windows 06/11/19 10-50
 # MacPro 06-11-19 10-58
-gkkghhj
+# gkkghhj
+# windows 13-40
+# windows 13-52
+# windows 14-11 
