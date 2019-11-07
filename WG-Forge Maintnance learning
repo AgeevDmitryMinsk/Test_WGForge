@@ -1,7 +1,11 @@
 #учеба в WG-Forge Maintnance
 
 Рабочий стол MacPro: /User/mbp13_2015/Desktop
-Место хранения ключей на MAC: /Users/mbp13_2015/.ssh/id_rsa + на Windows  D:\.ssh  и C:\Users\uzer\.ssh
+Место хранения ключей на MAC: /Users/mbp13_2015/.ssh/id_rsa + 
+на Windows  D:\.ssh  и C:\Users\uzer\.ssh
+Your identification has been saved in C:\Users\uzer/.ssh/id_rsa.
+Your public key has been saved in C:\Users\uzer/.ssh/id_rsa.pub.
+
 cd ~ puttygen /User/mbp13_2015/Desktop/ageev_dmitry_wargaming_public_key.ppk  -O public-openssh -o id_rsa.pub 
 ssh-rsa – то что сгенерировал Mac AAAAB3NzaC1yc2EAAAADAQABAAABAQDkox5idtc1W4xNrJa2y2RJnbe5OTvad1HcZ2OgRtqFklQQ2ig5hvwZtRcam188U50BSHKgR/WDPdu6Uef9FdZ6ryKDtzthYpROwziL2LtXVUL4L7Y5gRcm0bfsEoBplXY6iBGTIANFcuVJOKFopkpR4oz1VnqsNfa86OLkOeZs5wN8OJ7sQhiVCGVhJV8lKdX9ZVX0zKwO0Pwv9+Bd9QLcY3kd3lDczfMJmg+8tLpkxPJYR3qtFdP3e0K3n22WM2u6PTUIFnwNFDb4o/tGZGbMeKSD2jJtPRLp1KwACBWWHzKCkNGYpjbTvBds245ZKtGbLH2JAnbzLlrzGzG+VyrV ageev.dmitry@outlook.com
 
