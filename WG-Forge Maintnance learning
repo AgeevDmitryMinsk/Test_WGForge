@@ -17,7 +17,7 @@ yum install -y mariadb mariadb-server - установка mariadb mariadb-serve
 192.168.203.14/Zabbix
 http://ithelp21.ru/ustanovka-zabbix-na-centos/
 http://5.188.134.195/zabbix/setup.php
-ithelp21 - пароль на пользователя Zabbix
+ithelp21 - пароль на пользователя Zabbix - DBPassword=ithelp21
 3reBRakA – пароль для входа в CENTOS по SSH
 вход в Zabbix: Admin – zabbix
 cd .. - перейти на уровень выше (выйти из каталога)
