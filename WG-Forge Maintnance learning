@@ -13,6 +13,7 @@ ssh-rsa – то что сгенерировал Mac AAAAB3NzaC1yc2EAAAADAQABAAA
 sudo su – команда для работы в терминале под пользователем root
 sudo !! - запустить предыдущую команду с правами root
 reboot - перезагрузка
+yum install - Вариант инсталляции в системе Red Hat/centos:
 yum install -y mariadb mariadb-server - установка mariadb mariadb-server
 192.168.203.14/Zabbix
 http://ithelp21.ru/ustanovka-zabbix-na-centos/
@@ -20,6 +21,7 @@ http://5.188.134.195/zabbix/setup.php
 ithelp21 - пароль на пользователя Zabbix - DBPassword=ithelp21
 3reBRakA – пароль для входа в CENTOS по SSH
 вход в Zabbix: Admin – zabbix
+
 cd .. - перейти на уровень выше (выйти из каталога)
 cd текущий каталог – войти в текущий каталог
 ls – просмотреть содержимое текущего каталога
@@ -77,7 +79,39 @@ for … in … do … done
 for ((i=1; i<=10; i++)) do … done
 IFS=$”\n” – новая строка при чтение в цикле for 
 
+ncat -l 5000 --keep-open --exec "/bin/cat" 
+https://kali.tools/?p=4578 - всё про ncat на русском с примерами
+yum install nmap - инсталяция ncat в centos
+Примеры запуска Ncat
+Подключение к example.org используя протокол TCP на порту 8080:
+ncat example.org 8080
+Прослушивать входящие соединения используя протокол TCP на порту 8080:
+ncat -l 8080
+Перенаправить TCP порт 8080 на локальной машине на хост на порт 80:
+ncat --sh-exec "ncat example.org 80" -l 8080 --keep-open
+Прослушивать порт 8081 и прикрепить /bin/bash для исполнения переданных команд:
+ncat --exec "/bin/bash" -l 8081 --keep-open
+Привязать шелл (оболочку) к TCP порту 8081, ограничить доступ к хостам из локальной сети и ограничить максимальное число одновременных подключений на тремя:
+ncat --exec "/bin/bash" --max-conns 3 --allow 192.168.0.0/24 -l 8081 --keep-open
+Подключиться к smtphost:25 через сервер SOCKS4 на порту 1080:
+ncat --proxy socks4host --proxy-type socks4 --proxy-auth joe smtphost 25
+Подключиться к smtphost:25 через сервер SOCKS5 на порту 1080:
+ncat --proxy socks5host --proxy-type socks5 --proxy-auth joe:secret smtphost 25
+Создать HTTP прокси сервер на localhost на порту 8888:
+ncat -l --proxy-type http localhost 8888
+Отправить файл через TCP порт 9899 с host2 (клиент) на host1 (сервер):
+HOST1$ ncat -l 9899 > outputfile
+HOST2$ ncat HOST1 9899 < inputfile
+Отправить в другом направлении, превратив Ncat в сервер «одного файла»:
+HOST1$ ncat -l 9899 < inputfile
+HOST2$ ncat HOST1 9899 > outputfile
+
 Python3 скрипты: /usr/local/bin/charm
 Python3 проекты: /Users/mbp13_2015/PycharmProjects/Lesson1
 
 sudo scutil --set HostName myMacPro – переименовать пользователя в терминале)
+
+3 информационных канала: “стандартный ввод” (STDIN), “стандартный вывод” (STDOUT) и “стандартная ошибка” (STDERR)
+символ “>” используется для замены содержимого файла, 
+а “>>” — для добавления данных в его конец
+символ "|" - для того чтобы связать канал STDOUT одной команды с каналом STDIN другой
