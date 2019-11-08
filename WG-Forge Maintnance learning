@@ -13,6 +13,7 @@ ssh-rsa – то что сгенерировал Mac AAAAB3NzaC1yc2EAAAADAQABAAA
 sudo su – команда для работы в терминале под пользователем root
 sudo !! - запустить предыдущую команду с правами root
 reboot - перезагрузка
+yum install -y mariadb mariadb-server - установка mariadb mariadb-server
 192.168.203.14/Zabbix
 http://ithelp21.ru/ustanovka-zabbix-na-centos/
 http://5.188.134.195/zabbix/setup.php
