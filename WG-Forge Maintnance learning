@@ -111,6 +111,7 @@ HOST2$ ncat HOST1 9899 > outputfile
 Python3 скрипты: /usr/local/bin/charm
 Python3 проекты: /Users/mbp13_2015/PycharmProjects/Lesson1
 заметки о Python - в word на рабочем столе Windows
+в Linux для того, чтобы попробовать код на работоспособность достаточно в консоли ввести команду python и сам код.
 
 sudo scutil --set HostName myMacPro – переименовать пользователя в терминале)
 
