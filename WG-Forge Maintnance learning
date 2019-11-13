@@ -125,6 +125,20 @@ chsh -s /bin/bash - включение bash в качестве shell
 chsh -s /bin/zsh - включение zsh в качестве shell 
 
 sudo apt-get install tree -y #запустит команду tree в Bash
-sudo ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
+sudo ln -s /Appl
+ications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 # устанока команды subl в консоль BASH
  
+version: '3'
+services:
+  apache2:
+    build: ~/examples/docker/
+    image: apache2.4-php7.0:latest
+    ports:
+      - "80:80"
+    volumes:
+      - '/home/vagrant/dokuwiki/:/var/www/'
+
+
+restart: always
+http://localhost:8080  - мой localhost:8080 
