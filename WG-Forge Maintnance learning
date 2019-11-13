@@ -123,3 +123,5 @@ sudo scutil --set HostName myMacPro – переименовать пользо�
 
 chsh -s /bin/bash - включение bash в качестве shell 
 chsh -s /bin/zsh - включение zsh в качестве shell 
+
+sudo apt-get install tree -y #запустит команду tree в Bash
