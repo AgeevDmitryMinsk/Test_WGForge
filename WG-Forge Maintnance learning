@@ -142,3 +142,13 @@ services:
 
 restart: always
 http://localhost:8080  - мой localhost:8080 
+
+find / -type f -size +1G - для поиска большого обема файлов
+
+ip a - для просмотра своего IP
+systemctl start mariadb - для запуска mariadb
+systemctl status mariadb - для просмотра статуса mariadb
+
+
+select count(*) from title;
+describe title;
