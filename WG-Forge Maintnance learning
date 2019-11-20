@@ -58,8 +58,9 @@ iptables -A INPUT -i eth0 -p udp --dport 10050 -j ACCEPT
 lsblk – показывает диски
 blkid – для просмотра UUID
 fdisk -l
-df -h
-
+df -h  - #Disk Free Space #  -h for human readable value
+ps aux - #List Running Processes
+echo "Home for the current user is: $HOME" - вывести домашнюю директорию текущего пользователя
 
 
 Скрипты на BASH(Virtual Studio Code): 
@@ -68,6 +69,27 @@ cd /users/mbp13_2015/Projects/Bash_scripts
 chmod +x script1.sh – команда  в терминале сделать скрипт script1.sh исполняемым
 ./ script1.sh  - запуск скрипта в терминале
 Echo “…” – вывод инфы на экран терминала
+echo "I have \$1 in my pocket" - обратная косая черта, перед знаком доллара даст возм рывести на экран знак $
+#I have $1 in my pocket
+Существуют два типа переменных, которые можно использовать в bash-скриптах:
+- Переменные среды ($HOME и т.д.)
+- Пользовательские переменные:
+#!/bin/bash
+# testing variables
+grade=5
+person="Adam"
+echo "$person is a good boy, he is in grade $grade" 
+#Adam is a good boy, he is in grade 5
+
+Команду нужно заключить в два таких значка: обратного апострофа «`»:
+mydir=`pwd`
+При втором подходе c помощью конструкции $() то же самое записывают так:
+mydir=$(pwd)
+А скрипт, в итоге, может выглядеть так:
+#!/bin/bash
+mydir=$(pwd)
+echo $mydir
+
 if [ …. ] then …elif … else … fi
 if [пробел  выражение/сравнение пробел]
 больше: -gt
