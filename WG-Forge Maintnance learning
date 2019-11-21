@@ -151,6 +151,30 @@ sudo ln -s /Appl
 ications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 # устанока команды subl в консоль BASH
  
+
+ виртуализация VirtualBox + vagrant
+ установить VirtualBox + vagrant на Mac 
+ зайти в папку cd ~/wgforge2019_virtualization/
+ ввести команду vagrant up
+ vagrant ssh
+попадаем в vagrant@wgforge2019:~$  
+docker ps - показывает запущенные контейнеры в доккере
+docker ps -a - показывает остановленные контейнеры в доккере
+docker stop 59f4de5169dd - остановить контейнер в доккере
+docker rm 59f4de5169dd - удалить контейнер в доккере
+docker images - показывает images контейнеров в доккере - он не удаляется
+
+
+FROM debian
+
+RUN apt-get update && apt-get install -y python
+RUN apt-get update && apt-get install -y nmap
+
+ADD client.py /client.py
+
+CMD ncat -l 5000 -k --exec /bin/cat
+CMD ["/usr/bin/python","/client.py"]
+
 version: '3'
 services:
   apache2:
