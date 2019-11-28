@@ -22,6 +22,8 @@ ithelp21 - пароль на пользователя Zabbix - DBPassword=ithelp
 3reBRakA – пароль для входа в CENTOS по SSH
 вход в Zabbix: Admin – zabbix
 
+поиск файла:
+find /home/ -name "Docker*" -type f
 apt update - индексирование / update
 cd .. - перейти на уровень выше (выйти из каталога)
 cd текущий каталог – войти в текущий каталог
