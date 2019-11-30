@@ -64,7 +64,7 @@ fdisk -l
 df -h  - #Disk Free Space #  -h for human readable value
 ps aux - #List Running Processes
 echo "Home for the current user is: $HOME" - вывести домашнюю директорию текущего пользователя
-
+history - история команд
 
 Скрипты на BASH(Virtual Studio Code): 
 cd /users/mbp13_2015/Projects/Bash_scripts
